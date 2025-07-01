@@ -1,0 +1,118 @@
+        *{
+            margin: 0;
+            box-sizing: border-box;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+      :root {
+  --color-primary: #dfeff3;    
+  --color-secondary: #031f1c; 
+  --color-accent: #F97316;     
+  --color-background: #F9FAFB; 
+  --color-text: #111827;       
+}
+
+body{
+  height: 100%;
+}
+
+        .container{
+            height: 100vh;
+            background-color: #F2F2F2;
+            border:  #dbf671 solid;
+        }
+   
+        .nav {  
+         background-color: #b4b1b1;  
+         height: 100px;
+        
+        }
+  
+        .nav ul{
+          
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: center;
+            
+            padding-top: 45px;
+            list-style: none; 
+        }
+      .nav ul li {
+          border: var(--color-secondary) solid;
+          border-width: 1px;
+          padding-top:4px;
+          width: 4rem;
+          height: 2rem;
+          text-align: center;
+          color: var(--color-secondary);
+         
+          border-radius: 8px;
+          transition: all 0.15s ease-in-out;
+
+        }
+      .center{
+        padding-left: 10px;
+        padding-top: 20px;
+        height: 60px;
+        text-align: start;
+    
+
+        
+      }
+     
+    .Objectives ul,
+    .Objectives ol {
+       color: rgb(11, 98, 109);
+       padding: 10px 10px ;
+
+       
+    }
+  .tool-cards{
+    display: grid;
+    gap: 5px;
+    grid-row:auto;
+    column-gap: 5px;
+    justify-content: space-evenly;
+    height: 40%;
+  }
+  .card{
+    width: 250px;
+    height: 240px;
+    text-align: center;
+    background-color:var(--color-primary) ;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35); 
+
+  }
+  .tool-cards h3{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  a{
+    text-decoration: none;
+     color: var(--color-secondary);
+  }
+  .nav ul li:hover,.nav ul li a:hover{
+    font-size: 18px;
+    color: #ffffff;
+    background-color: var(--color-secondary);
+  }
+  .footer{
+    height: 90px;
+    padding-left: 10px;
+     padding-top: 20px;
+     text-align: center;
+    color: red;
+    background-color: #b4b1b1;
+  }
+  #html{
+    background: url(html.png)  center no-repeat ;
+    background-color: #ffffff;
+  }
+  #css{
+    background: url(css1.png) ;
+    background-color: #ffffff;
+  }
+  #js{
+    background: url(download.png)  ;
+  }
