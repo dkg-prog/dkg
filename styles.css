@@ -105,13 +105,13 @@ body{
     background-color: #b4b1b1;
   }
   #html{
-    background: url(html.png)  center no-repeat ;
+    background: url(images/html.png)  center no-repeat ;
     background-color: #ffffff;
   }
   #css{
-    background: url(css1.png) ;
+    background: url(images/css1.png) ;
     background-color: #ffffff;
   }
   #js{
-    background: url(download.png)  ;
+    background: url(images/download.png)  ;
   }
