@@ -72,10 +72,10 @@ body{
     grid-row:auto;
     column-gap: 5px;
     justify-content: space-evenly;
-    height: 40%;
+    height: auto;
   }
   .card{
-    width: 250px;
+    width: 220px;
     height: 240px;
     text-align: center;
     background-color:var(--color-primary) ;
@@ -115,3 +115,12 @@ body{
   #js{
     background: url(images/download.png)  ;
   }
+  @media only screen and (max-width: 600px) {
+   .tool-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+
+}

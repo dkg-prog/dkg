@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+ body{
+            height: 100dvh;
+            background: no-repeat center url('images/self\ image.webp') ;
+            background-color: rgba(0, 0, 0,);
+
+        }
+.container-about{
+        height: 88dvh;
+
+        
+}
+p{
+    padding: 5px;
+    text-align: left;
+    height: 20%;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #a87c4f79;
+    display: flex;
+    font-size: 18px;
+}
