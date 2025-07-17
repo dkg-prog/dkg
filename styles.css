@@ -104,6 +104,9 @@ body{
     color: red;
     background-color: #b4b1b1;
   }
+
+
+
   #html{
     background: url(images/html.png)  center no-repeat ;
     background-color: #ffffff;
@@ -115,7 +118,7 @@ body{
   #js{
     background: url(images/download.png)  ;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
    .tool-cards{
     display: flex;
     flex-direction: column;
