@@ -56,28 +56,30 @@ text-align: center;
 }
 
 .social-tools{
-height: 100px;
+height: 120px;
 display: flex;
 justify-content: space-around;
 padding-top: 30px;
 }
 
-.fa-whatsapp{
+.fa-discord{
 font-size: 50px;
 color: #001c40;
 }
 
-.fa-instagram{
+.fa-square-instagram{
 font-size: 50px;
 color: #001c40;
 }
 
-.fa-snapchat{
+.fa-square-snapchat{
 font-size: 50px;
 color: #001c40;
 }
 
-.fa-instagram:hover{
-
+.fa-square-instagram:hover,.fa-square-snapchat:hover,.fa-discord:hover{
+font-size: 60px;
 }
+
+
 
