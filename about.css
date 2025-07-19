@@ -3,24 +3,74 @@
     box-sizing: border-box;
 }
  body{
-            height: 100dvh;
-            background: no-repeat center url('images/self\ image.webp') ;
-            background-color: rgba(0, 0, 0,);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #dfeff3 0%, #F9FAFB 100%);
+            background-image: url('images/self image.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
         }
 .container-about{
-        height: 88dvh;
-
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 16px;
+        background: rgba(255,255,255,0.7);
+        border-radius: 18px;
+        box-shadow: 0 6px 24px rgba(3, 31, 28, 0.10);
+        margin: 32px auto;
+        max-width: 600px;
         
 }
 p{
-    padding: 5px;
+    padding: 32px 24px;
+    margin: 0;
     text-align: left;
-    height: 20%;
-    padding-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
     background-color: #a87c4f79;
-    display: flex;
-    font-size: 18px;
+    border-radius: 12px;
+    font-size: 1.15rem;
+    color: #031f1c;
+    box-shadow: 0 2px 8px rgba(3,31,28,0.08);
+    line-height: 1.6;
+    display: block;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background: #fff;
+  color: #031f1c;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 8px rgba(3, 31, 28, 0.08);
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .container-about {
+    padding: 16px 4vw;
+    max-width: 98vw;
+    margin: 16px auto;
+  }
+  p {
+    padding: 18px 8px;
+    font-size: 1rem;
+  }
 }

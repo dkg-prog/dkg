@@ -17,7 +17,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <title>Document</title>
   </head>
   <body>
@@ -29,32 +28,88 @@
         <li><a href="more.html">more</a></li>
       </ul>
     </div>
-    <h2>You can contact me by filling the form below:</h2>
-    <div class="form">
-      <form action="https://formspree.io/f/mzzvzavk" method="post">
-        <input
-          type="text"
-          id="fname"
-          name="fname"
-          placeholder="Full Name"
-        /><br />
-        <input type="text" id="email" name="email" placeholder="Email" /><br />
-        <label>
-          <textarea name="message"></textarea></label
-        ><br />
-        <button type="submit" id="submit">Send</button>
-      </form>
-    </div>
-    <div class="socials">
-      <h4>You can also contact me on these social media platforms:</h4>
+    <div class="main-content">
+      <h2>You can contact me by filling the form below:</h2>
+      <div class="form">
+        <form action="https://formspree.io/f/mzzvzavk" method="post">
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="Full Name"
+          /><br />
+          <input type="text" id="email" name="email" placeholder="Email" /><br />
+          <label>
+            <textarea name="message"></textarea></label
+          ><br />
+          <button type="submit" id="submit">Send</button>
+        </form>
+      </div>
+      <div class="socials">
+        <h4>You can also contact me on these social media platforms:</h4>
 
-      <section class="social-tools">
-        <a href="https://discordapp.com/users/lenseptic"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://www.instagram.com/altdkg/"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://t.snapchat.com/eGmKhRHq"><i class="fa-brands fa-square-snapchat"></i></a>
-      </section>
-
-      <div class="footer">Developed by Dayo @</div>
+        <section class="social-tools">
+          <a href="https://discordapp.com/users/lenseptic"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://www.instagram.com/altdkg/"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://t.snapchat.com/eGmKhRHq"><i class="fa-brands fa-square-snapchat"></i></a>
+        </section>
+      </div>
     </div>
+    <div class="footer">Developed by Dayo @</div>
+    <div id="toast" style="display:none;"></div>
+    <script>
+      // Toast styling
+      const toast = document.getElementById('toast');
+      toast.style.position = 'fixed';
+      toast.style.top = '32px';
+      toast.style.right = '-300px';
+      toast.style.background = '#F97316';
+      toast.style.color = '#fff';
+      toast.style.padding = '1rem 2rem';
+      toast.style.borderRadius = '8px';
+      toast.style.fontWeight = 'bold';
+      toast.style.fontSize = '1.1rem';
+      toast.style.boxShadow = '0 4px 16px rgba(3,31,28,0.12)';
+      toast.style.transition = 'right 0.5s';
+
+      // Form validation and custom submit
+      document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('fname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.querySelector('textarea[name="message"]').value.trim();
+
+        if (!name || !email || !message) {
+          showToast('Please fill in all fields.');
+          return;
+        }
+
+        // Send form data via AJAX to Formspree
+        fetch(this.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(this)
+        })
+        .then(response => {
+          if (response.ok) {
+            showToast('Sent');
+            this.reset();
+          } else {
+            showToast('Error sending message.');
+          }
+        })
+        .catch(() => showToast('Error sending message.'));
+      });
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.style.display = 'block';
+        setTimeout(() => { toast.style.right = '32px'; }, 50);
+        setTimeout(() => {
+          toast.style.right = '-300px';
+          setTimeout(() => { toast.style.display = 'none'; }, 500);
+        }, 2500);
+      }
+    </script>
   </body>
 </html>
