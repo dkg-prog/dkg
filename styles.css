@@ -1,4 +1,4 @@
-        *{
+*{
             margin: 0;
             box-sizing: border-box;
            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -118,11 +118,15 @@ body{
   #js{
     background: url(images/download.png)  ;
   }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
    .tool-cards{
     display: flex;
     flex-direction: column;
     align-items: center;
    
   }
+}
+
+h3 {
+  padding: 12px 0 12px 8px; /* Top, bottom, and left padding for headings */
 }
